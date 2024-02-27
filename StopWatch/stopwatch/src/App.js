@@ -1,7 +1,9 @@
+import Stopwatch from "./Stopwatch";
+
 function App() {
   return (
     <div>
-      <h2>Helllo</h2>
+      <Stopwatch/>
     </div>
   );
 }
