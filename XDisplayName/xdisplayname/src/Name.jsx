@@ -17,8 +17,11 @@ const Name = () => {
 
     const handleSubmit = (e)=>{
         e.preventDefault()
-        if(firstName.trim() === '' || lastName.trim() === ''){
+        if(firstName.trim() === '' && lastName.trim() === ''){
           setError("Please fill out this field")
+        }
+        else if(firstName.trim() === '' || lastName.trim() === ''){
+            setError("Please fill out this field")
         }
         else{
             setError("")
@@ -26,8 +29,6 @@ const Name = () => {
         }
         
     }
-
-    const isSubmitDisabled = firstName.trim() === '' || lastName.trim() === '';
 
   return (
     <div>
@@ -45,7 +46,7 @@ const Name = () => {
                 <input type='text' value={lastName} onChange={handleLastNameChange} />
             </Tooltip>
         </p>
-        <button type='submit' value='Submit' onClick={handleSubmit} disabled={isSubmitDisabled}>Submit</button>
+        <button type='submit' value='Submit' onClick={handleSubmit}>Submit</button>
         </form>
         <p>Full Name: {fullName}</p>
     </div>
