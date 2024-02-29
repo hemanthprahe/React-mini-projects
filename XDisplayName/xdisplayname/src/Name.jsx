@@ -42,7 +42,7 @@ const Name = () => {
                 <input type='text' value={lastName} onChange={handleLastNameChange} />
             </Tooltip>
         </p>
-        <input type='submit' value='Submit' onClick={handleSubmit}/>
+        <button type='submit' value='Submit' onClick={handleSubmit}></button>
         </form>
         <p>Full Name: {fullName}</p>
     </div>
