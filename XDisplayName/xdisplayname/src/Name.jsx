@@ -26,6 +26,9 @@ const Name = () => {
         }
         
     }
+
+    const isSubmitDisabled = firstName.trim() === '' || lastName.trim() === '';
+
   return (
     <div>
         <h1>Full Name Display</h1>
@@ -42,7 +45,7 @@ const Name = () => {
                 <input type='text' value={lastName} onChange={handleLastNameChange} />
             </Tooltip>
         </p>
-        <button type='submit' value='Submit' onClick={handleSubmit}>Submit</button>
+        <button type='submit' value='Submit' onClick={handleSubmit} disabled={isSubmitDisabled}>Submit</button>
         </form>
         <p>Full Name: {fullName}</p>
     </div>
